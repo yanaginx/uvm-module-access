@@ -1,0 +1,54 @@
+
+Easier UVM Code Generator version 2017-01-19 (Send feedback to info@doulos.com)
+
+Parsing cmdline ...
+
+num args is 2
+Searching for regmodel flag
+Searching for prefix
+Searching for common template
+common_tpl_fname: common.tpl
+pnum_m: 0
+Searching for Syosil scoreboard path
+Searching for templates
+T_List:  arith.tpl
+List: arith.tpl
+Parsing common : common.tpl ...
+
+dut_top: adder
+top_default_seq_count = 100
+prefix for top-level names: top
+$regmodel = 0
+
+Parsing Templates ...
+
+Reading[1]: arith.tpl
+agent_name: agent_name  = arith
+trans_item= trans
+trans_var: rand logic [7:0] input1;
+trans_var: rand logic [7:0] input2;
+trans_var: rand logic [8:0] sum;
+if_port = logic [7:0] A;
+if_port = logic [7:0] B;
+if_port = logic [7:0] F;
+driver_inc = arith_driver_inc.sv  inline
+monitor_inc = arith_monitor_inc.sv inline
+dir: generated_tb/tb/arith
+Writing code to files
+AGENT-ITEM: trans
+var_decl=rand logic [7:0] input1;
+stripped_decl=rand logic    input1;
+VARIABLE type = logic, var = input1
+var_decl=rand logic [7:0] input2;
+stripped_decl=rand logic    input2;
+VARIABLE type = logic, var = input2
+var_decl=rand logic [8:0] sum;
+stripped_decl=rand logic    sum;
+VARIABLE type = logic, var = sum
+top env agents = arith
+Generating testbench in generated_tb/tb
+Writing ports for interface arith_if_0
+Generating simulator scripts in generated_tb/sim
+env_list=, agent_list=arith,
+env_list=, agent_list=arith,
+Code Generation complete
